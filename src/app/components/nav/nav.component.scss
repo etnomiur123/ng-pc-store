@@ -1,0 +1,27 @@
+nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: blanchedalmond;
+
+  div {
+    flex: 1;
+  }
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+      margin-left: 4.5rem;
+  }
+
+  span {
+      background-color:cadetblue;
+      padding: 1rem 1.5rem;
+  }
+}

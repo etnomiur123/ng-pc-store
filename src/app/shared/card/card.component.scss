@@ -1,0 +1,23 @@
+.card {
+    max-width: 40rem;
+    height: 100%;
+    padding: 2rem;
+    background-color: whitesmoke;
+}
+
+.card__image {
+    height: 30rem;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.card__text {
+    margin-top: 2rem;
+}
+
+.card__btn {
+    margin-top: 2rem;
+}

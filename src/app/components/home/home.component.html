@@ -1,0 +1,7 @@
+<div class="home">
+  <div class="card-container">
+    <ng-container *ngIf="products$">
+      <app-card *ngFor="let product of products$ | async" [product]="product"></app-card>
+    </ng-container>
+  </div>
+</div>
