@@ -7,8 +7,11 @@ import { DetailsComponent } from './components/details/details.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { CardComponent } from './shared/card/card.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './api/products.service/products.service';
+import { CartComponent } from './components/cart/cart.component';
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from './api/products.service/state/reducers';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,18 @@ import { ProductsService } from './api/products.service/products.service';
     HomeComponent,
     NavComponent,
     DetailsComponent,
-    CardComponent
+    CardComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({
+      cart: cartReducer,
+    }),
   ],
   providers: [ProductsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,30 @@
+<div class="cart">
+  <div class="cart__items-container">
+    <p>Your cart:</p>
+    <hr />
+
+    <div class="cart__items-list" *ngIf="cart; else itemsNotFound">
+      <ul>
+        <li *ngFor="let item of cart" [routerLink]="['/product', item?.id]">
+          <div class="cart__list-item">
+            <img [src]="item?.img" />
+            <div class="cart__list-item-details">
+              <p class="cart__list-item-details-name">{{ item?.name }}</p>
+              <p class="cart__list-item-details-price">{{ item?.price }}</p>
+            </div>
+          </div>
+          <hr />
+        </li>
+      </ul>
+    </div>
+
+    <ng-template #itemsNotFound>
+      <div class="cart__items-empty">Your cart is empty</div>
+    </ng-template>
+
+    <hr>
+    <div>
+      <p>Total: €{{total}}</p>
+    </div>
+  </div>
+</div>

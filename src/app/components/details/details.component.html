@@ -1,1 +1,10 @@
-<p>details works!</p>
+<div class="product-details">
+  <div class="image-container">
+    <img [src]="product?.img" [alt]="product?.name">
+  </div>
+  <div class="details-container">
+    <p class="details__name">{{product?.name}}</p>
+    <p class="details__price">{{product?.price}}</p>
+  </div>
+  <button (click)="addToCart()">Add to cart</button>
+</div>

@@ -1,0 +1,20 @@
+.product-details {
+  display: flex;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  >* {
+    flex: 1;
+  }
+}
+
+.image-container {
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.details-container {
+  padding: 1rem;
+}

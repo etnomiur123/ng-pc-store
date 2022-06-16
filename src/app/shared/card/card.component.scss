@@ -1,23 +1,27 @@
 .card {
-    max-width: 40rem;
-    height: 100%;
-    padding: 2rem;
-    background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: whitesmoke;
+  margin: 1rem;
 }
 
 .card__image {
-    height: 30rem;
+  flex:1;
+  cursor: pointer;
 
-    img {
-        height: 100%;
-        width: 100%;
-    }
+  img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .card__text {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .card__btn {
-    margin-top: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
 }
